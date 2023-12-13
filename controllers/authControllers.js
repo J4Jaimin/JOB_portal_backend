@@ -3,7 +3,9 @@ import userModel from "../models/userModel.js"
 // REGISTER || POST
 
 export const registerUserController = async (req, res, next) => {
-    const { name, email, password } = await req.body;
+    const { name, email, password } = req.body;
+
+    console.log(req.body);
 
     if (!name) {
         return next("Name field is required.");

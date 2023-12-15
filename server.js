@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import colors from "colors";
 import cors from "cors";
 import morgan from "morgan";
-import bodyparser from "body-parser";
 import "express-async-errors";
 
 // import routes
@@ -28,7 +27,6 @@ const app = express();
 
 // middlewares
 app.use(express.json());
-app.use(bodyparser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(morgan('dev'));
 
